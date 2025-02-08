@@ -15073,9 +15073,8 @@ nm_GoGather(){
 				}
 			}
 		}
-	}
-	nm_currentFieldDown()
-	utc_min := FormatTime(A_NowUTC, "m")
+	}gifted_hasty := ((Mod(base_movespeed*10, 11.5) = 0) && base_movespeed != 23) ? 1 : 0
+base_movespeed := Floor(base_movespeed/(gifted_hasty ? 1.15 : 1))	utc_min := FormatTime(A_NowUTC, "m")
 	if(CurrentField="mountain top" && (utc_min>=0 && utc_min<15)) ;mondo dangerzone! skip over this field if possible
 		nm_currentFieldDown()
 }
